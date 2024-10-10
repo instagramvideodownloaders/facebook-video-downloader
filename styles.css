@@ -15,10 +15,8 @@ body {
 }
 
 .logo {
-    width: 100%; /* Adjust logo size as needed */
-    max-width: 200px; /* Set a maximum width */
-    display: block;
-    margin: auto; /* Center align */
+    width: 100%; /* Full-size logo */
+    height: auto; /* Maintain aspect ratio */
 }
 
 h1 {
@@ -46,6 +44,17 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
+}
+
+/* Responsive button styles */
+@media (max-width: 600px) {
+   .button-container {
+       flex-direction: column; /* Stack buttons vertically */
+   }
+   button {
+       width: 100%; /* Make buttons full width */
+       margin-bottom: 10px; /* Add space between buttons */
+   }
 }
 
 #result {
@@ -134,6 +143,15 @@ a.download-link:hover {
    text-decoration: none; 
    border-radius: 5px; 
    transition: background-color 0.3s ease; 
+}
+
+/* Responsive other tools button styles */
+@media (max-width: 600px) {
+   .tool-link {
+       display:block; /* Stack links vertically on small screens */
+       margin-bottom: 10px; /* Space between links */
+       width:auto; /* Allow auto width for better fit */
+   }
 }
 
 .tool-link:hover {
