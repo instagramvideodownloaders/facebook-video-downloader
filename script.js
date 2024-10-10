@@ -29,6 +29,7 @@ document.getElementById('downloadForm').addEventListener('submit', function(even
        })
        .catch(error => {
            console.error('Error:', error);
+           alert("An error occurred while fetching data. Please try again."); // User-friendly error message
            // Hide progress bar and text on error
            progressBarContainer.classList.add('hidden');
            progressText.classList.add('hidden');
